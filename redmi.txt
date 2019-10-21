@@ -1,0 +1,14 @@
+﻿<section> внутри <header>
++<header> смена <p> на <span>
++ one section for header is ready
+Как открывать/закрывать панель  с права в avacode?
++ footer is ready
++/- section Latest Works is ready:
+	выравнивание works>worg>img (блоки и картинки)
++ section About Me is ready
++ section Clients is ready
+
+===========
+ screen 67%
+
+
