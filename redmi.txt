@@ -7,8 +7,19 @@
 	выравнивание works>worg>img (блоки и картинки)
 + section About Me is ready
 + section Clients is ready
+создать gitignore
++ section Expert In is ready
+finish макет
 
 ===========
  screen 67%
+	50%
 
 
+Flexbox
+========
+
+пример talko
+img phone/letop/code и т.д. сделать как bg-img
+
+quarkclub
