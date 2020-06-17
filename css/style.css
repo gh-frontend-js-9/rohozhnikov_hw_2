@@ -4,13 +4,9 @@ body {
 	font-family: Lato;
 }
 
-/*header, main, footer{
-	width: 100%;
-}*/
-
 header .cookies {
-	color: #fff;
 	height: 72px;
+	color: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -38,7 +34,7 @@ header .cookies button {
 }
 
 .wrapper {
-	width: 58.5%;
+	width: 100%;
 	margin: 0 auto;
 	max-width: 1170px;
 }
@@ -138,6 +134,7 @@ main .course {
 }
 
 main .expert h3 {
+	border: 2px solid transparent;
 	color: #3677fd;
 	font-size: 24px;
 	font-weight: 700;
@@ -178,17 +175,16 @@ main .expert, main .clients {background-color: #f1f8ff;}
 main .works {
 	display: flex;
 	flex-wrap: wrap;
-	padding-top: 54px;	
+	padding-top: 17px;
+	padding-bottom: 174px;
 	justify-content: space-around;
 }
-
-main .works:first-child {padding-top: 34px;}
-main .works:last-child {padding-bottom: 194px;}
 
 main .work {
 	width: 359px;
 	height: 269px;
 	display: flex;
+	margin: 17px auto;
 	border-radius: 10px;
 	align-items: center;
 	justify-content: center;
@@ -196,19 +192,21 @@ main .work {
 	background-color: #f3f3f3;
 }
 
-main .work img {
-	align-items: center;
-}
+main .work img {align-items: center;}
 
-main .clients div {
-	display: flex;
+
+main .clients .wrapper {
+    display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	padding: 20px 0 115px 0;
-	justify-content: space-around;
+	padding-bottom: 95px;
+    justify-content: space-around;
 }
 
-main .clients img {filter: grayscale(1) opacity(0.3);}
+main .clients img {
+	padding: 20px;
+	filter: grayscale(1) opacity(0.3);
+}
 
 footer {
 	font-size: 50px;
@@ -236,12 +234,45 @@ header .portfolio button {
 	text-transform: uppercase;
 }
 
-footer button {margin-left: 64px;}
-
 footer .fix {
 	height: 247px;
 	display: flex;
+	flex-wrap: wrap;
+	max-height: 347px;
+	text-align: center;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 
+@media screen and (max-width: 576px) {
+	header .cookies {height: 108px;}
+	main .about .wrapper, main .work {width: 90% !important;}
+	header .portfolio h1, footer {font-size: 40px !important;}
+	header .cookies, header .portfolio, main .about .wrapper, footer {padding: 0 5%;}
+}
+
+button:hover, button:focus {background-color: #c3d2e4 !important;}
+
+main .courses span:hover,
+main .courses span:focus {
+	height: 136px;
+	border: 3px solid #fff;
+}
+
+main .expert h3:hover,
+main .expert h3:focus {border-bottom: 2px solid #3677fd;} 
+
+main .work:hover, 
+main .work:focus {filter: opacity(.7);}
+
+main .clients img:hover, 
+main .clients img:focus {filter: none;}
+
+img:hover, img:focus,
+main .expert h3:hover,
+main .expert h3:focus,
+main .courses span:hover,
+main .courses span:focus
+button:hover, button:focus, 
+header .portfolio .arrow:hover, 
+header .portfolio .arrow:focus {cursor: pointer !important;}
