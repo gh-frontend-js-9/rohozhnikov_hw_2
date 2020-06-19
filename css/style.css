@@ -42,7 +42,6 @@ header .cookies button {
 header .portfolio, footer {
 	color: #fff;
 	background-color: #3695ff;
-	/*background-image: linear-gradient(51deg, #3695ff 0%, #3564fc 100%);*/
 }
 
 header .portfolio {
@@ -54,6 +53,12 @@ header .portfolio {
 header .portfolio nav {
 	text-align: right;
 	margin-top: 31px; 
+}
+
+.nav_menu {
+    height: 100%;
+    max-height: 20px;
+    margin-top: 31px;
 }
 
 header .portfolio h1 {
@@ -95,7 +100,7 @@ header .portfolio .arrow {
 
 main .about {padding-bottom: 115px;}
 
-main section h2 {
+main section h2, .hire_title {
 	margin: 0;
 	display: flex;
 	color: #3677fd;
@@ -244,7 +249,39 @@ footer .fix {
 	justify-content: space-evenly;
 }
 
+:focus {outline: 0;}
+ol, li {list-style: none;}
+
+@media screen and (max-width: 992px) {
+	.lng_ico {
+		top: -60px;
+		position: relative;
+		justify-content: center !important;
+	}
+	.hire_form button {margin-top: -35px;}
+	.modal_hire, .hire_form, .hire_form input, .hire_form textarea {width: 90% !important;}
+}
+
 @media screen and (max-width: 576px) {
+	.nav_modal {
+		top: 3% !important;
+		position: absolute !important;
+	}
+	.social {
+		padding-top: 30px !important;
+			flex-wrap: wrap !important;
+			width: 50% !important;
+	}
+	.social a {margin: 5px;}
+	.modal_hire {
+    	top: 1px !important;
+		height: 99%;
+		position: fixed !important;
+	}
+	.lng_ico {top: -25%;}
+	
+    .nav_link{margin: 0px !important;}
+
 	header .cookies {height: 108px;}
 	main .about .wrapper, main .work {width: 90% !important;}
 	header .portfolio h1, footer {font-size: 40px !important;}
@@ -276,3 +313,199 @@ main .courses span:focus
 button:hover, button:focus, 
 header .portfolio .arrow:hover, 
 header .portfolio .arrow:focus {cursor: pointer !important;}
+
+.nav_btn {
+	width: 45px !important;
+	display: flex !important;
+    margin-left: auto !important;
+    flex-direction: row !important;
+    justify-content: right !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.nav_btn:hover, .nav_btn:focus {background-color: transparent !important;}
+
+.nav_btn:focus+ .nav_modal {
+    filter: alpha(Opacity=100);
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0 0 0 9999px rgba(0,0,0, 0.7);
+}
+
+.nav_img {
+    width: 100%;
+    max-width: 25px;
+    height: 100%;
+    max-height: 19px;
+    filter: alpha(Opacity=75);
+    opacity: 0.75;
+}
+
+.nav_img:hover {
+    filter: alpha(Opacity=100);
+    opacity: 1;
+}
+
+.nav_modal {
+    filter: alpha(Opacity=0);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 1173px;
+    height: 90%;
+    min-height: 704px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    margin: 0 auto;
+}
+
+.nav_link {
+    font-size: 40px;
+    line-height: 70px;
+    padding: 95px 0 81px;
+}
+
+.nav_link a {
+    color: #d2d2d2;
+    text-transform: capitalize;
+}
+
+.nav_link a:hover {color: #3677fd;}
+
+.social {
+    width: 287px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 75px 54px 0;
+    border-top: 2px solid rgba(25, 66, 119, 0.7);
+}
+
+.social a {
+    height: 50px;
+    width: 50px;
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.social a:hover {background-color: #3684fe;}
+.social img { margin: 0 auto;}
+
+.lng_ico {
+    display: flex;
+    justify-content: flex-end;
+    height: 22px;
+}
+.lng_ico p {
+    display: flex;
+    align-items: center;
+    color: #d2d2d2;
+    text-transform: uppercase;
+    margin: -24px 24px 0;
+    filter: alpha(Opacity=80);
+    opacity: 0.8;
+}
+
+.lng_ico p:hover {
+    color: #3677fd;
+    filter: alpha(Opacity=100);
+    opacity: 1;
+}
+
+.lng_ico img {
+    margin-left: 14px;
+    width: 37px;
+    height: 22px;
+}
+
+.hire {
+    display: flex;
+    justify-content: center;
+}
+
+.hire_btn:focus+ .modal_hire {
+    filter: alpha(Opacity=100);
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0 0 0 9999px rgba(0,0,0, 0.7);
+}
+
+.modal_hire {
+    filter: alpha(Opacity=0);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 812px;
+    height: 100%;
+    max-height: 623px;
+    border-radius: 15px;
+    margin: 0 auto;
+    position: absolute;
+	top: 100px;
+    z-index: 999999;
+}
+
+.modal_hire_foot {
+	top: 1px;
+	position: fixed;
+}
+
+.modal_hire h2 {
+	font-weight: 400;
+	padding: inherit !important;
+	text-transform: uppercase;
+	margin: 63px auto 59px auto;
+}
+
+.hire_form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 517px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hire_form input {
+    width: 100%;
+    max-width: 517px;
+    height: 100%;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid #b7c0c9;
+    padding: 16px 0 17px 20px;
+    margin-bottom: 16px;
+}
+
+.hire_form textarea {
+    width: 100%;
+    max-width: 517px;
+    height: 100px;
+    max-height: 180px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid #b7c0c9;
+    padding: 17px 0 60px 20px;
+    margin-bottom: 46px;
+}
+
+.hire_form button {
+	height: auto !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    letter-spacing: 1px !important;
+    border-radius: 30px !important;
+    padding: 21px 41px !important;
+    background-color: #3695ff !important;
+}
+
